@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context=".ui.neighbour_list.ListNeighbourActivity">
+        tools:context=".ui.reunion_list.ListReunionActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"
@@ -28,25 +28,7 @@
 
             </androidx.appcompat.widget.Toolbar>
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:tabIndicatorHeight="3dp">
 
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabItem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tab_neighbour_title" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabItem2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tab_favorites_title" />
-
-            </com.google.android.material.tabs.TabLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.viewpager.widget.ViewPager
@@ -65,9 +47,10 @@
             app:srcCompat="@drawable/ic_person_add_white_24dp" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
     <FrameLayout
         android:id="@+id/viewFragments"
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 </RelativeLayout>
