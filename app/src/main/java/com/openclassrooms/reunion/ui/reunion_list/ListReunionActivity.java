@@ -29,7 +29,7 @@ public class ListReunionActivity extends AppCompatActivity implements DisplayFav
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_neighbour);
+        setContentView(R.layout.activity_list_reunion);
         PreferencesManager.getInstance().clear();
 
         ButterKnife.bind(this);

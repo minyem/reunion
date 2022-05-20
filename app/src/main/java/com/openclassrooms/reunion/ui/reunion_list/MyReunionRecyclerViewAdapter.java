@@ -28,7 +28,7 @@ public class MyReunionRecyclerViewAdapter extends RecyclerView.Adapter<MyReunion
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
           view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_neighbour, parent, false);
+                .inflate(R.layout.fragment_reunion, parent, false);
 
         return new ViewHolder(view);
     }

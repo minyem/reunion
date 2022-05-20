@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.openclassrooms.reunion.R;
 import com.openclassrooms.reunion.di.DI;
-import com.openclassrooms.reunion.events.DeleteNeighbourEvent;
+import com.openclassrooms.reunion.events.DeleteReunionEvent;
 import com.openclassrooms.reunion.model.Reunion;
 import com.openclassrooms.reunion.service.ReunionApiService;
 
@@ -51,7 +51,7 @@ public class ReunionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_neighbour_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_reunion_list, container, false);
         Context context = view.getContext();
         mRecyclerView = (RecyclerView) view;
         mRecyclerView.setLayoutManager(new LinearLayoutManager(context));
@@ -90,8 +90,8 @@ public class ReunionFragment extends Fragment {
      * @param event
      */
     @Subscribe
-    public void onDeleteNeighbour(DeleteNeighbourEvent event) {
-     //   mApiService.deleteReunion(event.mReunion);
+    public void onDeleteNeighbour(DeleteReunionEvent event) {
+        mApiService.deleteReunion(event.reunion);
         initList();
     }
 }
