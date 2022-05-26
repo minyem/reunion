@@ -43,18 +43,18 @@ public class AddReunionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_neighbour);
+  //      setContentView(R.layout.activity_add_neighbour);
         ButterKnife.bind(this);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mApiService = DI.getReunionApiService();
 
-        n  = findViewById(R.id.aboutMeLyt);
-        avatar  = findViewById(R.id.avatar);
-        nameInput  = findViewById(R.id.nameLyt);
-        phoneInput  = findViewById(R.id.phoneNumberLyt);
-        addressInput  = findViewById(R.id.addressLyt);
-        aboutMeInput  = findViewById(R.id.aboutMe);
-        addButton  = findViewById(R.id.create);
+  //      n  = findViewById(R.id.aboutMeLyt);
+  //      avatar  = findViewById(R.id.avatar);
+  //      nameInput  = findViewById(R.id.nameLyt);
+  //      phoneInput  = findViewById(R.id.phoneNumberLyt);
+  //      addressInput  = findViewById(R.id.addressLyt);
+  //      aboutMeInput  = findViewById(R.id.aboutMe);
+  //      addButton  = findViewById(R.id.create);
 
 
 
@@ -89,21 +89,21 @@ public class AddReunionActivity extends AppCompatActivity {
 
     }
 
-    @OnClick(R.id.create)
-    void addNeighbour() {
-        Reunion reunion = new Reunion(
-                System.currentTimeMillis(),
-                nameReunion.getEditText().getText().toString(),
-                mNeighbourImage,
-                addressInput.getEditText().getText().toString(),
-                phoneInput.getEditText().getText().toString(),
-                aboutMeInput.getText().toString(),
-                addMail.getEditText().getText().toString(),
-                false
-        );
-        mApiService.createReunion(Reunion  reunion);
-        finish();
-    }
+   // @OnClick(R.id.create)
+  //  void addNeighbour() {
+   //     Reunion reunion = new Reunion(
+   //             System.currentTimeMillis(),
+  //              nameReunion.getEditText().getText().toString(),
+   //             mNeighbourImage,
+  //              addressInput.getEditText().getText().toString(),
+   //             phoneInput.getEditText().getText().toString(),
+  //              aboutMeInput.getText().toString(),
+  //              addMail.getEditText().getText().toString(),
+  //              false
+  //      );
+  //      mApiService.createReunion(reunion);
+   //     finish();
+  //  }
 
     /**
      * Generate a random image. Useful to mock image picker

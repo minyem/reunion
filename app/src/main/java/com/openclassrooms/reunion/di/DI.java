@@ -1,8 +1,8 @@
 package com.openclassrooms.reunion.di;
 
-import com.openclassrooms.reunion.service.DummyNeighbourApiService;
 import com.openclassrooms.reunion.service.DummyReunionApiService;
-import com.openclassrooms.reunion.service.NeighbourApiService;
+import com.openclassrooms.reunion.service.DummyReunionApiService;
+import com.openclassrooms.reunion.service.ReunionApiService;
 import com.openclassrooms.reunion.service.ReunionApiService;
 
 /**

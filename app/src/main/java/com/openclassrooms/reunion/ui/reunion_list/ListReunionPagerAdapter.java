@@ -13,13 +13,13 @@ public class ListReunionPagerAdapter extends FragmentPagerAdapter {
 
     /**
      * getItem is called to instantiate the fragment for the given page.
+     *
      * @param position
      * @return
      */
     @Override
     public Fragment getItem(int position) {
-
-            return ReunionFragment.newInstance();
+        return ReunionFragment.newInstance();
 
     }
 
@@ -29,6 +29,6 @@ public class ListReunionPagerAdapter extends FragmentPagerAdapter {
      */
     @Override
     public int getCount() {
-        return 2;
+        return 1;
     }
 }

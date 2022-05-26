@@ -47,15 +47,15 @@ public class Reunion {
         this.id = id;
     }
 
-    public String getNameReunionameReunion() {
+    public String getNameReunion() {
         return nameReunion;
     }
 
-    public void setNameReunionameReunion(String name) {
+    public void setNameReunion(String name) {
         this.nameReunion = nameReunion;
     }
 
-    public String getHeureReunionheureReunion() {
+    public String getHeureReunion() {
         return heureReunion;
     }
 

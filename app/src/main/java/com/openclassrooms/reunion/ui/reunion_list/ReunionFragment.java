@@ -60,7 +60,7 @@ public class ReunionFragment extends Fragment {
     }
 
     /**
-     * Init the List of neighbours
+     * Init the List of Reunion
      */
     private void initList() {
         mReunion = mApiService.getReunion();
@@ -90,7 +90,7 @@ public class ReunionFragment extends Fragment {
      * @param event
      */
     @Subscribe
-    public void onDeleteNeighbour(DeleteReunionEvent event) {
+    public void onDeleteReunion(DeleteReunionEvent event) {
         mApiService.deleteReunion(event.reunion);
         initList();
     }

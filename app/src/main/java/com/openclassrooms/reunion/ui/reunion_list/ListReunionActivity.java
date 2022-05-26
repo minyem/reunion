@@ -7,14 +7,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-import com.openclassrooms.reunion.PreferencesManager;
 import com.openclassrooms.reunion.R;
-import com.openclassrooms.reunion.service.DisplayFavoriteList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ListReunionActivity extends AppCompatActivity implements DisplayFavoriteList {
+public class ListReunionActivity extends AppCompatActivity  {
 
     // UI Components
     @BindView(R.id.main_content)
@@ -30,7 +28,7 @@ public class ListReunionActivity extends AppCompatActivity implements DisplayFav
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_reunion);
-        PreferencesManager.getInstance().clear();
+
 
         ButterKnife.bind(this);
 
@@ -38,7 +36,7 @@ public class ListReunionActivity extends AppCompatActivity implements DisplayFav
         mPagerAdapter = new ListReunionPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
-     //   mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+      mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
     }
 
@@ -47,11 +45,11 @@ public class ListReunionActivity extends AppCompatActivity implements DisplayFav
    //     AddNeighbourActivity.navigate(this);
    // }
 
-    @Override
-    public void apply() {
+  //  @Override
+  //  public void apply() {
 
-        NeighbourFavorisFragment neighbourFavorisFragment = (NeighbourFavorisFragment) getSupportFragmentManager().getFragments().get(1);
-        neighbourFavorisFragment.initList();
-        mViewPager.setCurrentItem(1);
-    }
+  //      reunionFavorisFragment neighbourFavorisFragment = (NeighbourFavorisFragment) getSupportFragmentManager().getFragments().get(1);
+  //      neighbourFavorisFragment.initList();
+  //      mViewPager.setCurrentItem(1);
+  //  }
 }
