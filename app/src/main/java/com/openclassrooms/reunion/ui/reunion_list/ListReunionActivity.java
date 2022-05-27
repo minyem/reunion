@@ -22,6 +22,7 @@ public class ListReunionActivity extends AppCompatActivity  {
     @BindView(R.id.container)
     ViewPager mViewPager;
 
+
     ListReunionPagerAdapter mPagerAdapter;
 
     @Override
@@ -33,10 +34,10 @@ public class ListReunionActivity extends AppCompatActivity  {
         ButterKnife.bind(this);
 
         setSupportActionBar(mToolbar);
-        mPagerAdapter = new ListReunionPagerAdapter(getSupportFragmentManager());
-        mViewPager.setAdapter(mPagerAdapter);
-       mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
-      mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+       mPagerAdapter = new ListReunionPagerAdapter(getSupportFragmentManager());
+       mViewPager.setAdapter(mPagerAdapter);
+     // mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
+     //mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
     }
 

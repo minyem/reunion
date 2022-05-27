@@ -6,30 +6,25 @@ import java.util.List;
 
 
 /**
- * Neighbour API client
+ * Reunion API client
  */
 public interface ReunionApiService {
 
     /**
-     * Get all my Neighbours
+     * Get all my Reunion
      * @return {@link List}
      */
     List<Reunion> getReunion();
 
-    /**
-     * Get Favoris Neighbours
-     * @return {@link List}
-     */
-  //  List<Neighbour> getFavorisNeighbours();
 
     /**
-     * Deletes a neighbour
+     * Deletes a reunion
      * @param reunion
      */
     void deleteReunion(Reunion reunion);
 
     /**
-     * Create a neighbour
+     * Create a reunion
      * @param reunion
      */
     void createReunion(Reunion reunion);
